@@ -16,4 +16,9 @@ describe TennisScore do
     2.times { tennis_score.won_point }
     expect(tennis_score.score).to eq 'Thirty-Love'
   end
+
+  it 'can score a game where a player has scored thrice' do
+    3.times { tennis_score.won_point }
+    expect(tennis_score.score).to eq 'Forty-Love'
+  end
 end

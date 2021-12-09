@@ -4,12 +4,14 @@ class TennisScore
     @score = 'Love'
   end
 
+  SCORE = {
+    'Love' => 'Fifteen',
+    'Fifteen' => 'Thirty',
+    'Thirty' => 'Forty'
+  }
+
   def won_point
-    if @score == 'Love'
-      @score = 'Fifteen'
-    else
-      @score = 'Thirty'
-    end
+    @score = SCORE[@score]
   end
 
   def score
